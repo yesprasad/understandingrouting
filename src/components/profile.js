@@ -1,8 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Profile = () => {
+
+const Profile = (props) => {
     return(
-        <div>This is all what we know about you!</div>
+        <div>
+            <p>This is all what we know about you!</p>
+            <Link to={{pathname: `${props.match.url}/Books`}}>
+                Take me to Books from here
+            </Link>
+        </div>
     )
 }
 
